@@ -3,36 +3,61 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Bicycle;
+package bicycle;
 
 /**
  *
  * @author jerald
  */
-public class Bicycle{
-	public static void main(String[] args) {	
-BicycleClass Bicycle1=new BicycleClass();
-Bicycle1.ChangeGear(2);
-Bicycle1.ChangeSpeed(20);
-Bicycle1.ApplyBreak(30);
-Bicycle1.CurrentStatus();
+public class Bicycle {
 
-		}
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+pulsar newobj=new pulsar();
+    newobj.changegear(2);
+    newobj.changeSpeed(50);
+    newobj.upspeed(30);
+    newobj.applybrike(55,2);
+    newobj.status();
+    }
+    
 }
-	class BicycleClass{
-		int gear=1;
-		int speed=40;
-	void ChangeGear(int NewGear){
-	gear+=NewGear;
-	}
-	void ChangeSpeed(int NewSpeed){
-	speed+=NewSpeed;
-	}
-	void ApplyBreak(int DesressSpeed){
-	speed-=DesressSpeed;
-	}
-	void CurrentStatus(){
-	System.out.println("Gear "+gear+" speed "+speed);
-	}
+interface BicycleMain{
+    void changeSpeed(int newvalue);
+    void changegear(int newvale);
+    void upspeed(int increment);
+    void applybrike(int decrement,int newgear);
 }
-	
+class pulsar implements BicycleMain{
+    int speed=10;
+    int gear=1;
+
+    @Override
+    public void changeSpeed(int newvalue) {
+        speed=speed+newvalue;
+       
+    }
+
+    @Override
+    public void changegear(int newvale) {
+       gear=gear+newvale;
+    }
+
+    @Override
+    public void upspeed(int increment) {
+       speed=speed+increment; 
+    }
+
+    @Override
+    public void applybrike(int decrement,int newgear) {
+        speed=speed-decrement;
+        gear=gear-newgear;
+    }
+    public void status(){
+        System.out.println("speed "+speed);
+        System.out.println("Gear "+gear);
+    }
+    
+}
