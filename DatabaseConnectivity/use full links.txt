@@ -1,0 +1,4 @@
+
+https://stackoverflow.com/questions/24081719/connecting-mysql-server-to-netbeans?newreg=4b7aa2170e8d4b04a1d9a02722288d57
+
+https://netbeans.org/kb/docs/web/mysql-webapp.html
