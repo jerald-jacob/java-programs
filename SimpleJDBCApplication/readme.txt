@@ -32,7 +32,7 @@ Step 2: Create the Database
 The MySQL database (which we'll create down the line with the CREATE command) is like a folder where all the related tables are stored. So, in most cases, when the theme of the database changes, we keep the table that adheres to the theme encompassed within a logical area called the database. For example, a library database may contain tables such asbooks, authors, publisher, borrowing, and so forth. But, before we create the database, we must log in to MySQL with the new user we have just created (if you have not created any, use the default root user).
 
 Log in again with the new user account. Because we have used "set password" for this user, -p will prompt for it.
-mysql -h localhost -u mickey -p
+mysql -h localhost -u jerald -p12345678
 Create a database. Here, testdbis like a folder, a container that will contain all the tables we will create.
 CREATE testdb;
 USE testdb;
