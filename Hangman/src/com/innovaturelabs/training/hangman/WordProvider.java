@@ -10,7 +10,11 @@ package com.innovaturelabs.training.hangman;
  * @author jerald
  */
 public interface WordProvider {
+<<<<<<< HEAD
     String  nextWord();
      boolean hasNext();
+=======
+    void  nextWord();
+>>>>>>> 2a174c0136ac008f31ad85fd2af783e7b04a4154
     
 }

@@ -5,17 +5,24 @@
  */
 package com.innovaturelabs.training.hangman;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+=======
+import java.util.Random;
+
+
+>>>>>>> 2a174c0136ac008f31ad85fd2af783e7b04a4154
 /**
  *
  * @author jerald
  */
 public class WordGenerator implements WordProvider {
 
+<<<<<<< HEAD
    private static String[] stringarray = {"Hello","world","welcome"}; 
     
     
@@ -40,3 +47,34 @@ public class WordGenerator implements WordProvider {
 
    
 }
+=======
+    String[] wordDictionary;
+
+    public String[] getWordDictionary() {
+        return wordDictionary;
+    }
+
+    public WordGenerator() {
+        this.wordDictionary = new String[]
+        {
+            "apple", "banana", "lemon", "lime", "mango","Books", "Pens", "Pencils", "Notebooks","mobile",
+        };
+    }
+
+    @Override
+    public void nextWord() {
+        int idx = new Random().nextInt(wordDictionary.length);
+String random = (wordDictionary[idx]);
+        System.out.println(random);
+       
+         }
+    String One(){
+        
+        int idx = new Random().nextInt(wordDictionary.length);
+String random = (wordDictionary[idx]);
+        return random;
+    }
+    }
+
+
+>>>>>>> 2a174c0136ac008f31ad85fd2af783e7b04a4154
